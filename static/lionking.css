@@ -30,18 +30,37 @@
 .seat.available{
     background-color: #c680ff;
 }
-.seat.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.available{
+/* .seat.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.available{
     background-color: red;
-}
+} */
 .seat.available.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6{
     background-color: yellow;
 
 }
 
-
 .seat.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6.available{
     background-color: rgb(41, 23, 143);
 }
+
+.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.seat.available{
+    background-color: rgb(218, 137, 33);
+}
+.Z66C5D05F-207F-4E62-9CC3-1602F00E8970.seat.available{
+    background-color: aqua;
+}
+.Z5CAA4A20-8ADF-419E-84EC-53010E022329.seat.available{
+
+}
+.Z40706B05-7C6A-4DDA-8633-E1DE490A1DAD.seat.available{
+
+}
+.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6.seat.available{
+
+}
+.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.seat.available{
+
+}
+
 .box{
     width:100%;
     height:100%;
@@ -172,4 +191,17 @@
     /* width: 100%; */
     display: inline-block;
     letter-spacing: 0.1em;
+}
+#prev{
+    display: inline-block;
+    float: left;
+    padding-left: 30%;
+    padding-top: 5%;
+}
+#next{
+    display: inline-block;
+    float: right;
+    padding-right: 30%;
+    padding-top: 5%;
+    
 }

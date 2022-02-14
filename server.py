@@ -1,6 +1,11 @@
 from flask import Flask, render_template,redirect
-from datetime import datetime
+from datetime import datetime 
 from datetime import timedelta
+
+
+
+# import datetime
+# from datetime import timedelta
 
 # import calendar
 
@@ -15,7 +20,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     
-    return render_template("calendar.html")
+    curdate = datetime.now()
+    tdydate = curdate.strftime('%Y-%m-%d')
+    return redirect(f'/lionking/{tdydate}')
 
 
 # @app.route("/lionking/<date>")
@@ -59,41 +66,56 @@ def index():
 # from datetime import date
 # from datetime import timedelta
 
+# @app.route('/lionking/<date>')
+# def date (date):
+#     return render_template('calendar.html')
+
+
+
+
+
 @app.route("/lionking/<dateinfo>")
-def datainformation (dateinfo):
+def dateinformation (dateinfo):
     
-    [year,month,day] = dateinfo.split('-')
-    year = int(year)
-    month = int(month)
-    day = int(day)
-    dates = datetime(year,month,day)
-    startday = dates - timedelta(dates.weekday())
-    allweeks = []
-    for weeks in range(6):
-        weeksquad = []
-        for week in range(7):
-            # dateonly = datetime.strptime(startday+timedelta(week+7*weeks), '%a %b %d %Y').strftime('%d/%m/%Y')
-            # print(dateonly)
-            weeksquad.append(startday+timedelta(week+7*weeks))
-        allweeks.append(weeksquad)
+    # [year,month,day] = dateinfo.split('-')
+    # year = int(year)
+    # month = int(month)
+    # day = int(day)
+    # dates = datetime(year,month,day)
+    # startday = dates - timedelta(dates.weekday())
+    # print (startday);
+    # allweeks = []
+    # for weeks in range(6):
+    #     weeksquad = []
+    #     for week in range(7):
+    #         # dateonly = datetime.strptime(startday+timedelta(week+7*weeks), '%a %b %d %Y').strftime('%d/%m/%Y')
+    #         # print(dateonly)
+    #         weeksquad.append(startday+timedelta(week+7*weeks))
+    #         print(startday)
+    #     allweeks.append(weeksquad)
 
-    # for w in weeks:
-        # print(w)
-        # for days in w:
-            # print(days)
-            # daysList.append(days)
+    # # for w in weeks:
+    #     # print(w)
+    #     # for days in w:
+    #         # print(days)
+    #         # daysList.append(days)
 
-    resultDate = {
-        'monthYear' : year,
-        'monthName' : dates.strftime("%B"),
-        'week' : allweeks
-        # 'month' : month
+    # resultDate = {
+    #     'monthYear' : year,
+    #     'monthName' : dates.strftime("%B"),
+    #     'week' : allweeks
+    #     # 'month' : month
 
-    }
+    # }
     
-    return resultDate
+    # # return render_template('calendar.html', r = resultDate)
+    return render_template('calendar.html',dateData=dateinfo)
+# def date (dateinfo):
+    # return render_template('calendar.html')
    
-    
+# @app.route('/lionking/hello/<dateinfo>')
+# def date(dateinfo):
+#     return render_template('calendar.html')
 
 
 if __name__ == '__main__':

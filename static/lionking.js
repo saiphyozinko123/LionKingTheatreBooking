@@ -1,71 +1,40 @@
-// Create a table to show every day in Feb
-let monthHTML = `
-<table>
- <caption>February</caption>
- <tr>
- <th>Mon</th>
- <th>Tue</th>
- <th>Wed</th>
- <th>Thu</th>   
- <th>Fri</th>
- <th>Sat</th>
- <th>Sun</th>
- </tr>
- <tr>
- <td id='d2022-01-31'>31</td>
- <td id='d2022-02-01'>1</td>
- <td id='d2022-02-02'>2</td>
- <td id='d2022-02-03'>3</td>
- <td id='d2022-02-04'>4</td>
- <td id='d2022-02-05'>5</td>
- <td id='d2022-02-06'>6</td>
- </tr>
- <tr>
- <td id='d2022-02-07'>7</td>
- <td id='d2022-02-08'>8</td>
- <td id='d2022-02-09'>9</td>
- <td id='d2022-02-10'>10</td>
- <td id='d2022-02-11'>11</td>
- <td id='d2022-02-12'>12</td>
- <td id='d2022-02-13'>13</td>
- </tr>
-
-</table>
-`;
-// jQuery.get("/lionking/2021-02-02",function(data){
-//   let x = JSON.parse(data)
-//   console.log(x)
-// })
-//   .then((r) => r.json())
-//   .then((r) => {
-//     console.log(r)
-//     for(let d of r){
-//       console.log(d.days)
-//     }
-
-// })
-// for (let day = 1; day < 31; day ++){
-//     console.log(day)
-//     let monthHTML =`<div class="day">${day}</div>`;
-
-// }
-// let data = JSON.parse("{{ result }}");
-
-// console.log(data)
-// year = 2021
-// month = 02
-
-let dateTime = new Date();
-let realDateTime = dateTime.getFullYear()+'-'+(dateTime.getMonth()+1)+'-'+'1';
-// let realDateTime = dateTime.getFullYear()+'-'+(dateTime.getMonth()+1)+'-'+dateTime.getDate();
-// console.log(realDateTime)
-// realDateTime = 2022-01-01
-
-fetch(`/lionking/${realDateTime}`)
-  .then(r => r.json())
-  .then(r => {
-    // console.log(r.week)
-    let dayName = `
+function calendar(date){
+  let inputDate = new Date(date);
+    let allweek = []
+    if(inputDate.getMonth()== 4){
+        inputDate.setDate(1);
+        startDay = new Date(inputDate.getTime() - 1000*60*60*24* (inputDate.getDay()+6));
+        let n = startDay.getTime();
+        for (let weeks = 0; weeks<6; weeks ++){
+            weeksquad = []
+            for (let week = 0; week<7; week ++){
+                let dateCalculate = new Date(n + 1000*60*60*24*(week+(weeks*7)));
+                let result = dateCalculate.toISOString('en',{day:'2-digit',month:'short',weekday:'short'});
+                const splitDate = result.split('T');
+                weeksquad.push(splitDate[0])
+            }
+        allweek.push(weeksquad)
+        }
+        console.log(allweek)
+    }
+    else{
+        inputDate.setDate(1);
+        startDay = new Date(inputDate.getTime() - 1000*60*60*24* (inputDate.getDay()-1));
+        let n = startDay.getTime();
+        for (let weeks = 0; weeks<6; weeks ++){
+            weeksquad = []
+            for (let week = 0; week<7; week ++){
+                let dateCalculate = new Date(n + 1000*60*60*24*(week+(weeks*7)));
+                let result = dateCalculate.toISOString('en',{day:'2-digit',month:'short',weekday:'short'});
+                const splitDate = result.split('T');
+                weeksquad.push(splitDate[0])
+            }
+        allweek.push(weeksquad)
+        }
+        console.log(allweek)
+    }
+  
+  let dayName = `
     <tr>
     <th>Mon</th>
     <th>Tue</th>
@@ -75,48 +44,35 @@ fetch(`/lionking/${realDateTime}`)
     <th>Sat</th>
     <th>Sun</th>
     </tr>
-    `
-    document.getElementById('tab').innerHTML = dayName;
-    for (let week of r.week ){
+      `
+  document.getElementById('tab').innerHTML = dayName;
+  for (let week of allweek){
+      console.log(week)
       let row = document.createElement('tr');
       // console.log(week)
       
-      for (let eachDay of week){
+    for (let eachDay of week){
 
-        function changeDateFormat(date) {
-          let changeDate = new Date(date),
-            month = ("0" + (changeDate.getMonth() + 1)).slice(-2),
-            day = ("0" + changeDate.getDate()).slice(-2);
-          return [changeDate.getFullYear(), month, day].join("-");
-        }
+      // function changeDateFormat(date) {
+      //   let changeDate = new Date(date),
+      //     month = ("0" + (changeDate.getMonth() + 1)).slice(-2),
+      //     day = ("0" + changeDate.getDate()).slice(-2);
+      //     return [changeDate.getFullYear(), month, day].join("-");
+      //   }
         
-        // console.log(changeDateFormat(eachDay))
-        let weekDays = changeDateFormat(eachDay)
-        // console.log(weekDays)
-        let cell = document.createElement('td');
-        // cell.id = 'd' + weekDays
-        idName = 'd'+ weekDays
-        console.log(idName)
-        cell.setAttribute('id', idName);
-        cell.innerText = weekDays.split('-')[2]
-        // console.log(weekDays.split('-')[2])
+      // let weekDays = changeDateFormat(eachDay)
 
-        // console.log(eachDay)
-        // c = eachDay.split(' ')[1]
-        // console.log(c)
-        // document.getElementById('tab').innerHTML = cell
-        row.append(cell)
+      let cell = document.createElement('td');
+      let idName = 'd'+ eachDay
+      console.log(idName)
+      cell.setAttribute('id', idName);
+      cell.innerText = eachDay.split('-')[2]
+        
+      row.append(cell)
       }
-      // document.getElementById('tab').append(row)
-      // console.log(row)
       document.getElementById('tab').append(row)
     }
     
-    // document.getElementById("tab").append(row)
-    // document.getElementById("tab").innerHTML = dayName;
-    
-
-    // document.getElementById("calendar").innerHTML = monthHTML;
     for (let td of document.querySelectorAll("td")) {
       let daynum = td.innerText;
       td.innerHTML = `<div class=box><div class=daynum>${daynum}</div></div>`;
@@ -175,8 +131,12 @@ fetch(`/lionking/${realDateTime}`)
         }
       }
     });
-  })
+  
 
-
+}
+let dateTime = new Date();
+let realDateTime = dateTime.getFullYear()+'-'+(dateTime.getMonth()+1)+'-'+'1';
+// console.log('date is '+ realDateTime)
+calendar(dateInput)
  
 
