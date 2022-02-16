@@ -1,14 +1,340 @@
+.container-fluid{
+    /* background-color: rgb(127, 255, 148); */
+    margin: 0;
+    padding: 0;
+
+    /* background-color: rgb(182, 123, 51); */
+    /* width: auto; */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    /* background-color: rgb(172, 62, 62); */
+    /* color: rgb(20, 87, 59); */
+    font-family: 'Lato','Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+/* body{
+    height: 690px;
+    width: auto;
+
+    overflow-x: hidden;
+    background-color: #c680ff;
+} */
+/* header{
+
+    /* margin: 0 auto; */
+header{
+    width: 100%;
+    background-color: #00023F;
+    margin: 0;
+    padding: 0;
+}
+.img{
+    height: 15%;
+    text-align: center;
+
+}
+.img img{
+    height: 5%;
+    width: 7%;
+}
+.bdsection{
+    height: 110%;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-top: 1%;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+
+}
+.butone{
+    display: inline-block;
+    float: left;
+    padding-left: 40%;
+    /* margin-bottom: 10px; */
+    /* background-color: #00023F; */
+    /* margin-top: 10px; */
+}
+.buttwo{
+    display: inline-block;
+    float: left;
+    padding-left: 19%;
+    /* margin-bottom: 10px; */
+    /* padding-top: 10%; */
+}
+
+.bdy{
+    /* background-color: #555; */
+
+    height: 1050px;
+    /* height: 690px; */
+}
+
+
+.fa-solid{
+    color: #00023F;
+}
+.status{
+    /* background-color: #9eff80; */
+    height: 2.5%;
+    /* display: block; */
+    margin-top: 3%;
+    /* position: relative; */
+    /* text-align: center; */
+}
+.avail{
+    font-size: 75%;
+    font-weight: 400;
+    padding-left: 10.5%;
+    padding-top: 0.7%;
+    display: inline-block;
+    float: left;
+}
+.pone,.ptwo,.pthree{
+    display: inline-block;
+    float: left;
+    padding-left: 0.8%;
+    font-size: 60%;
+    font-weight: 600;
+    padding-top: 0.8%;
+}
+.sone,.stwo,.sthree{
+    padding-right: 5px;
+    font-size: 80%;
+}
+.sone{
+    color: green;
+}
+.stwo{
+    color: #D39841;
+}
+.sthree{
+    color: #e61f1f;
+}
+/* .ptwo{
+    display: inline-block;
+    float: left;
+}
+.pthree{
+    display: inline-block;
+    float: left;
+} */
+#calendar{
+    width: 84%;
+    height: 76%;
+    text-align: center;
+    /* background-color: #D5D6E2; */
+
+
+    background-color: #d5d6e2d8;
+    /* display: inline-block; */
+    margin-left: 8%;
+    margin-top: 1%;
+    border-radius: 15px;
+    padding-left: 1.5%;
+    /* padding-top: 3%; */
+    position: relative;
+    /* margin-top: 4%; */
+    /* padding-left: 10%; */
+    /* display: inline; */
+    /* margin-left: 20%;
+    margin-top: 10%; */
+
+
+}
+.lion{
+    width: 23%;
+    height: 100%;
+    /* background-color: #00023F; */
+    /* display: inline-block; */
+    background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.01)),url(/static/photo/lionking4.jpg);
+    /* float: right; */
+    position: absolute;
+    /* display: inline-block; */
+    padding-right: 100px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    right: 0;
+
+    /* padding-left: 100px; */
+}
+.text{
+    /* background-color: #00023F; */
+    width: 150%;
+    height: 10%;
+    position: relative;
+}
+.disney{
+    /* width: 150%; */
+    color: #f7f4f4;
+    font-size: 110%;
+    font-weight: 600;
+    /* text-align: center; */
+    padding-top: 6%;
+    margin: 0;
+    /* display: inline-block; */
+    position: absolute;
+    padding-left: 11%;
+
+}
+.theature{
+    /* width: 150%; */
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 80%;
+    /* text-align: center; */
+    /* display: inline-block; */
+    /* padding-bottom: 100px ;
+    margin-bottom: 100px; */
+    margin: 0;
+    /* margin-bottom: 10%; */
+    position: absolute;
+    padding-top: 15%;
+    padding-left: 28%;
+    /* padding: 0; */
+}
+.pastover{
+    opacity: 30%;
+    /* background-color: #00023F; */
+}
+#available{
+    font-size: 70%;
+    padding-top: 10%;
+
+}
+#tab{
+    width: 74%;
+    /* height: 40%; */
+    border-spacing: 9px;
+    border-collapse: separate;
+    /* display: block; */
+    /* float: left; */
+    position: absolute;
+    /* padding-left: 1%; */
+    /* left: 0; */
+
+
+    /* display: inline-block; */
+    /* padding: 100px; */
+
+    /* position: absolute; */
+    
+
+}
+#tab td{
+    width: 6%;
+    height: 124px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 8%;
+    
+    
+    /* background: rgba(255,255,255,0.1); */
+    /* background: rgba(240, 233, 233, 0.1); */
+    background-color: rgb(249, 249, 251,0.3);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(25px);
+    
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    vertical-align: super;
+    /* padding: 10px; */
+    padding-left: 1%;
+    padding-bottom: 0.5%;
+    font-weight: 500;
+
+    /* list-style-type: decimal-leading-zero; */
+
+    /* position: relative; */
+    /* display: flex;  */
+    /* display: inline-block; */
+    /* margin-top: 10px; */
+    /* display: inline; */
+    /* padding-top: 1px; */
+
+
+
+}
+#tab tr{
+    /* width: 10%;
+    height: 50%; */
+    cursor: pointer;
+    /* padding-top: 5px; */
+    /* display: inline-flex */
+    /* display: block; */
+}
+#tab th{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    
+} 
+
+/* --------------- table div adjustment ------------ */
+/* #firstdiv{
+    background-color: #2f2d97;
+    color: aqua;
+    padding-top: 100px;
+}  */
+#maindiv{
+    /* background-color: rgb(211, 231, 218); */
+    height: auto;
+    width: auto;
+    /* position: relative; */
+    padding-left: 5%;
+    
+    
+    
+}
+#maindiv :first-child {
+    /* background-color: red; */
+    font-weight: 700;
+    font-size: 85%;
+    /* color: rgb(64, 65, 62); */
+    /* color: #6e73a0; */
+    color: #343791dc;
+    
+   
+    
+
+
+
+}
+#maindiv :last-child{
+    /* background-color: aquamarine; */
+    /* display: inline-block; */
+    font-size: 60%;
+    font-weight: 500;
+    /* color: aqua; */
+    padding-left: 10%;
+    color: #667fb1;
+    /* display: inline-block; */
+    
+    /* padding-left: 20px; */
+    
+}
+
+/* ----------------- table ---------------- */
+
 .dot{
     display:inline-block;
-    width:10px;
-    height: 10px;
+    width:11px;
+    height: 11px;
     border-radius: 10px;
 }
 .dot.LOW{
-    background-color: rgb(230, 31, 31);
+    background-color: #e61f1f;
 }
 .dot.MEDIUM{
-    background-color: rgb(236, 236, 8);
+    background-color: #D39841;
 }
 .dot.GOOD{
     background-color: rgb(42, 143, 42);
@@ -73,135 +399,5 @@
 .Matinee{
 
 }
-/* ---------------- calendar -------------- */
-#calendar{
-    text-align: center;
-    background-color: rgba(78, 212, 150, 0.616);
-    display: inline-block;
-    width: 1000px;
-    height: 900px;
-    margin-left: 10%;
-    padding-left: 20px;
-    border-radius: 1%;
-}
-#tab{
-    width: 90%;
-    height: 90%;
-    border-spacing: 9px;
-    border-collapse: separate;
 
-    /* display: inline-block; */
-    /* padding: 100px; */
-
-    /* position: absolute; */
-    
-
-}
-#tab td{
-    width: 10%;
-    height: 5%;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 8%;
-    
-    
-    background: rgba(255,255,255,0.1);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-    border-right: 1px solid rgba(255,255,255,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    backdrop-filter: blur(25px);
-    
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    vertical-align: super;
-    padding: 10px;
-    font-weight: 500;
-
-    /* list-style-type: decimal-leading-zero; */
-
-    /* position: relative; */
-    /* display: flex;  */
-    /* display: inline-block; */
-    /* margin-top: 10px; */
-    /* display: inline; */
-    /* padding-top: 1px; */
-
-
-
-}
-#tab tr{
-    width: 10%;
-    height: 5%;
-    cursor: pointer;
-    /* padding-top: 5px; */
-    /* display: inline-flex */
-    /* display: block; */
-}
-#tab th{
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 400;
-    
-} 
-
-/* --------------- table div adjustment ------------ */
-/* #firstdiv{
-    background-color: #2f2d97;
-    color: aqua;
-    padding-top: 100px;
-}  */
-#maindiv{
-    /* background-color: rgb(211, 231, 218); */
-    height: 40%;
-    /* position: relative; */
-    padding-left: 5%;
-    
-    
-}
-#maindiv :first-child {
-    /* background-color: red; */
-    font-weight: 500;
-    
-   
-    
-
-
-
-}
-#maindiv :last-child{
-    /* background-color: aquamarine; */
-    /* display: inline-block; */
-    font-size: 12px;
-    
-    /* padding-left: 20px; */
-    
-    
-    
-    
-}
-.daynum{
-    /* background-color: #2f2d97; */
-    width: 100%;
-    height: 30%;
-    font-size: 20px;
-}
-#secdiv{
-    /* background-color: #DDDDDD; */
-    padding-left: 15%;
-    /* width: 100%; */
-    display: inline-block;
-    letter-spacing: 0.1em;
-}
-#prev{
-    display: inline-block;
-    float: left;
-    padding-left: 30%;
-    padding-top: 5%;
-}
-#next{
-    display: inline-block;
-    float: right;
-    padding-right: 30%;
-    padding-top: 5%;
-    
-}
+/* --------------------------------------------------------------------------- */
