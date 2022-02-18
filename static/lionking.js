@@ -1,9 +1,12 @@
-// let result
-// let m = 0;
-// let input = new Date(dateInput)
+let dateOfFirst = window.location.pathname.split("/")[2];
+let months = ["Jan","Feb","Mar","Apr","May"];
+let monthName = months[new Date(dateOfFirst).getMonth()];
 function calendar(date){
   
   let inputDate = new Date(date);
+  let monthName = inputDate.toLocaleString('default', { month: 'long' })
+  document.getElementById('mthName').append(monthName)
+  console.log('inputDate'+monthName)
     let allweek = []
     if(inputDate.getMonth()== 4){
         inputDate.setDate(1);
@@ -82,16 +85,31 @@ function calendar(date){
     for (let td of document.querySelectorAll("td")) {
       let dayofBox = new Date(td.id.substring(1));
       let dateAfter = new Date(dayofBox.getTime()+1000*60*60*24);
+      // alert(dateAfter)
+      // console.log('dateaft'+dateAfter)
       let daynum = td.innerText;
+      let lastDay = new Date(inputDate.getFullYear(), inputDate.getMonth()+1, 0);
+      let xb = lastDay.getDate()+2
+      lastDay.setDate(xb)
+      let last = lastDay
+      // console.log(last)
+      // console.log('lastDay is'+ lastDay.toISOString('en',{day:'2-digit',month:'short',weekday:'short'}))
       let pastDay = ' ';
-      console.log('past day'+ pastDay)
         if (dateAfter<=tdyDate){
           pastDay = 'pastover'
-        };
+        }if(last<=dateAfter){
+          pastDay = 'last'
+        }
+        // if (tdyMonth === dateAfter){
+        //   pastDay = 'pastover'
+        // }
+        // if(dateAfter==afterMonth){
+        //   pastDay = 'pastover'
+        // }
       td.innerHTML = `<div class='box ${pastDay}'><div class=daynum>${daynum}</div></div>`;
     }
 
-    fetch("https://tw.igs.farm/lionking/all.json")
+    fetch(`https://tw.igs.farm/lionking/all.json`)
     .then((r) => r.json())
     .then((r) => {
       let performances = r.data.getShow.show.performances;
@@ -116,13 +134,15 @@ function calendar(date){
           if (cell.firstElementChild.classList.contains('pastover')){
             performanceDiv.innerText = "Not Available"
             performanceDiv.setAttribute('id', 'available');
-            // alert('not available');
-            // return;
           }
+
 
           
           performanceDiv.onclick = () => {
             if (cell.firstElementChild.classList.contains('pastover')){
+              return;
+            }
+            if(cell.firstElementChild.classList.contains('last')){
               return;
             }
             // document.getElementById("tab").classList.add("hide");
@@ -140,7 +160,6 @@ function calendar(date){
                 for (let s of r.seats) {
                   let d = document.createElement("div");
                   
-                  
                   d.onclick=()=>{
                     console.log(s.available)
                     let price = parseInt(p.price.minPrice + p.price.minPriceFee)
@@ -155,7 +174,6 @@ function calendar(date){
                     // console.log('list is'+thelist)
                     for (let li of thelist){
                       console.log('price is'+li['eachPrice'])
-                     
                       
                     }
                     console.log(total)
@@ -185,27 +203,34 @@ function calendar(date){
         }
       }
     });
-  
+    // let m = 0;
 
+    // let dateData = ['2022']
+    // let x = 0
+    // let sub = 1;
+    let dateMonth = inputDate.getMonth()+1;
+    let y = inputDate.getFullYear();
+
+    if(dateMonth == 1){
+      document.getElementById("prev").classList.add("nexmonth");
+    }else if(dateMonth == 12){
+      document.getElementById("next").classList.add("nexmonth");
+      
+    }
+
+    document.getElementById('next').onclick=()=>{
+      dateMonth++
+      location.href = `http://localhost:5000/lionking/${y}-${dateMonth}-01`;
+    }
+    
+    document.getElementById('prev').onclick=()=>{
+      dateMonth--
+      location.href = `http://localhost:5000/lionking/${y}-${dateMonth}-01`;
+    }
+    
+   
 }
-// let dateTime = new Date();
-// let realDateTime = dateTime.getFullYear()+'-'+(dateTime.getMonth()+1)+'-'+'1';
-// console.log('date is '+ realDateTime)
-calendar(dateInput)
-console.log(dateInput)
- 
 
+calendar(dateInput);
 
-// document.getElementById('prev').onclick=()=>{
-
-  
-  
-//   console.log('month is'+input.getMonth())
-//   m = input.getMonth()
-//   m++
-//   input.setMonth(m)
-//   calendar(input)
-//   console.log('new month'+m)
-  
-// }
 
