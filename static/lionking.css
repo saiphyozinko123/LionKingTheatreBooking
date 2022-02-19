@@ -374,43 +374,121 @@ header{
 .seat{
     display:inline-block;
     position: absolute;
-    width:6px;
-    height: 6px;
+    width:5px;
+    height: 5px;
     border-radius: 10px;
     background-color: #DDDDDD;
+    margin-left: 0.5%;
+    /* padding-right: 3px; */
+    /* margin-left: 5px; */
+    /* margin-right: 10px; */
+    /* margin-left: 2px; */
+    /* margin-right: -10px; */
+}
+.name{
+    display:inline-block;
+    position: absolute;
+    /* width:auto; */
+    /* height: 10px; */
+    /* padding-left: 4px;
+    padding-right: 4px; */
+    font-weight: 200;
+    font-size: 40%;
+    /* margin-left: 2%;
+    margin-right: 1%; */
+    /* padding-left: 1%; */
+    /* padding-right: 1.5%; */
+    /* margin-right: 5%; */
+    color: #00023F;
+    pointer-events:none;
+    /* margin-right: 10%; */
+    /* border-radius: 20px; */
+    /* background-color: #4e15b9; */
 }
 .seat.available{
-    background-color: #c680ff;
+    background-color: #d488d6;
+    cursor: pointer;
+}
+.seat.unavailable{
+    pointer-events:none;
 }
 /* .seat.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.available{
     background-color: red;
 } */
+.seat.available.z4A9F2A68-D4B5-47FA-A271-F45DCC7561B0{
+    background-color: #8263ca;
+}
 .seat.available.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6{
-    background-color: yellow;
+    background-color: #ED872D;
 
 }
 
-.seat.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6.available{
-    background-color: rgb(41, 23, 143);
+.seat.available.ZE63AF510-1AF6-47A9-892F-AE2870568454{
+    background-color: #E30022;
 }
 
-.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.seat.available{
-    background-color: rgb(218, 137, 33);
+.seat.available.Z9DCE98DD-8CED-4D28-9CFC-F56B599E3457{
+    background-color: #5d860f;
 }
-.Z66C5D05F-207F-4E62-9CC3-1602F00E8970.seat.available{
-    background-color: aqua;
+.seat.available.Z8D781BA2-EB6F-4B14-9BE1-0CD13DE688A5{
+    background-color: 	#78866B;
 }
-.Z5CAA4A20-8ADF-419E-84EC-53010E022329.seat.available{
-    background-color: rgb(75, 201, 106);
+.seat.available.Z2D7676BB-9256-4B65-AB9E-54AEB3DE660D{
+    background-color: #FFEF00;
 }
-.Z40706B05-7C6A-4DDA-8633-E1DE490A1DAD.seat.available{
-    background-color: rgb(164, 56, 190);
+.seat.available.ZCE2685E0-C355-42FC-8464-F2E0BF817BF9{
+    background-color: #00CC99;
 }
-.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6.seat.available{
-    background-color: rgb(161, 107, 45);
+.seat.available.Z5CAA4A20-8ADF-419E-84EC-53010E022329{
+    background-color:#99BADD ;
 }
-.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.seat.available{
-    background-color: rgb(236, 35, 159);
+.seat.available.Z446FCC73-6AD7-4170-90C7-F83338B1A534{
+    background-color: #ED9121;
+}
+.seat.available.Z4A9F2A68-D4B5-47FA-A271-F45DCC7561B0{
+    background-color:#2f7a33	;
+}
+.seat.available.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6{
+    background-color:#007BA7;
+}
+.seat.available.ZE63AF510-1AF6-47A9-892F-AE2870568454{
+    background-color:#A0785A;
+}
+.seat.available.Z9DCE98DD-8CED-4D28-9CFC-F56B599E3457{
+    background-color: #36454F;
+}
+.seat.available.Z8D781BA2-EB6F-4B14-9BE1-0CD13DE688A5{
+    background-color:#DE3163;
+}
+.seat.available.Z50DA0EC8-BAF1-4520-8DE8-BFB2CE85EB66{
+    background-color:#FFB7C5;
+}
+.seat.available.ZCB02887E-CC1D-44A6-89C6-A8307A56467A{
+    background-color:#CD5C5C;
+}
+.seat.available.ZA60ADC68-C030-4FA5-83F9-E0D082F77105{
+    background-color:#00FF6F;
+}
+.seat.available.ZCE2685E0-C355-42FC-8464-F2E0BF817BF9{
+    background-color: #002E63;
+}
+.seat.available.Z5CAA4A20-8ADF-419E-84EC-53010E022329{
+    background-color: #654321;
+}
+.seat.available.Z446FCC73-6AD7-4170-90C7-F83338B1A534{
+    background-color: #682f5a;
+}
+.seat.available.Z69B368BF-ED6B-4B96-B7A5-38B26758D469{
+    background-color:#013220;
+}
+.seat.available.Z12B44C00-FEA3-4B1C-A903-183B4BF65BF6{
+    background-color: #FF8C00;
+}
+.seat.available.Z40706B05-7C6A-4DDA-8633-E1DE490A1DAD{
+    background-color: #BD33A4;
+}
+.seat.available.ZC51001DD-C89C-49E6-A386-D5D4D142EDFD{
+    background-color: #692b0e;
 }
 
 .box{
