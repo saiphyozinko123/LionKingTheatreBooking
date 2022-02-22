@@ -20,19 +20,19 @@
             <div class="img"><img src="/static/photo/atg.png" alt="atg"></div>
         </header>
         <section class="bdy">
-            <div class="bdsection">
-                <div class="butdiv">
+            <div class="bdsection" id="bdsection">
+                <div class="butdiv" id="butdiv">
                     <div class="butone">
                    
-                        <a href="#" id="prev">  <i class="fa-solid fa-circle-chevron-left"></i></a>
+                        <a id="prev">  <i class="fa-solid fa-circle-chevron-left"></i></a>
                     </div>
                     <div id="mthName"></div>
                     <div class="buttwo">
-                        <a href="#" id="next">  <i class="fa-solid fa-circle-chevron-right"></i></a>
+                        <a id="next">  <i class="fa-solid fa-circle-chevron-right"></i></a>
                        
                     </div>
                 </div>
-                <div class="status">
+                <div class="status" id="status">
                     <p class="avail">Availability</p>
                     <p class="pone"><i class="fa-solid fa-circle sone"></i>Good</p>
                     <p class="ptwo"><i class="fa-solid fa-circle stwo"></i>Medium</p>
@@ -52,8 +52,58 @@
                         
                     </div>
                 </div>
-                <div id=seats></div>
-                <div id="price"></div>
+                <div class="row" id="seatrow">
+                    
+                    <div id="seats" class="col-9"></div>
+                    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">Seat Booking</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    <div class="offcanvas-body" id="offbody">
+                        <table class="table datatable">
+                            <thead class="thead-light">
+                              <tr>
+                                <th scope="col">Seat Label</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="trRow"></tr>
+                                <tr>
+                                    <th colspan="3" class="btnConfirm"><button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="offcanvas" aria-label="Close" id="confimrbtn">Confirm</button></th>
+                                </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    </div>
+
+                    <div id="price" class="col-3">
+                        <table class="table finalOrder">
+                            <thead class="thead-light">
+                              <tr class="table-info">
+                                <th scope="col" colspan="3" class="disneyheader">Disney's The Lion King<br><p>(Lyceum Theature) <br><h7 id="performanceTime"></h7></p></th>
+                              </tr>
+                            </thead>
+                            <tbody id="tableComfirmData">
+
+                            </tbody>
+                            <tbody>
+                                <tr class="table-info totTable">
+                                    <th colspan="2">Total Price</th>
+                                    <th id="totalPrice"></th>
+                                </tr>
+                                <tr class="table-info">
+                                    <th colspan="3"><button type="button" class="btn btn-danger btn-sm order">Reserve seats and continue</button></th>
+                                </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+                
+
             </div>
         </section>
     </div>

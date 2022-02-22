@@ -1,6 +1,4 @@
-let dateOfFirst = window.location.pathname.split("/")[2];
-let months = ["Jan","Feb","Mar","Apr","May"];
-let monthName = months[new Date(dateOfFirst).getMonth()];
+document.getElementById("seatrow").classList.add("hide");
 function calendar(date){
   
   let inputDate = new Date(date);
@@ -70,42 +68,21 @@ function calendar(date){
       document.getElementById('tab').append(row)
     }
 
-    
-    // console.log('today date is'+tdyDate)
-    // for(let cell of document.querySelectorAll('td')){
-    //     let dayofBox = new Date(cell.id.substring(1));
-    //     let dateAfter = new Date(dayofBox.getTime()+1000*60*60*24);
-    //     let pastDay = ' ';
-    //     if (dateAfter<=tdyDate){
-    //       pastDay = 'pastover'
-    //     };
-    // }
-
     let tdyDate = new Date();
     for (let td of document.querySelectorAll("td")) {
       let dayofBox = new Date(td.id.substring(1));
       let dateAfter = new Date(dayofBox.getTime()+1000*60*60*24);
-      // alert(dateAfter)
-      // console.log('dateaft'+dateAfter)
       let daynum = td.innerText;
       let lastDay = new Date(inputDate.getFullYear(), inputDate.getMonth()+1, 0);
       let xb = lastDay.getDate()+2
       lastDay.setDate(xb)
       let last = lastDay
-      // console.log(last)
-      // console.log('lastDay is'+ lastDay.toISOString('en',{day:'2-digit',month:'short',weekday:'short'}))
       let pastDay = ' ';
         if (dateAfter<=tdyDate){
           pastDay = 'pastover'
         }if(last<=dateAfter){
           pastDay = 'last'
         }
-        // if (tdyMonth === dateAfter){
-        //   pastDay = 'pastover'
-        // }
-        // if(dateAfter==afterMonth){
-        //   pastDay = 'pastover'
-        // }
       td.innerHTML = `<div class='box ${pastDay}'><div class=daynum>${daynum}</div></div>`;
     }
 
@@ -147,6 +124,13 @@ function calendar(date){
             // document.getElementById("tab").classList.add("hide");
             // document.getElementById("lion").classList.add("hide");
             document.getElementById("calendar").classList.add("hide");
+            document.getElementById("seatrow").classList.remove("hide")
+            document.getElementById("butdiv").classList.add("hide")
+            document.getElementById("status").classList.add("hide")
+            document.getElementById("bdsection").classList.add("bdsectiontwo")
+           
+            let performanceTime = new Date(p.dates.performanceDate)
+            document.getElementById('performanceTime').append(performanceTime.toLocaleString())
             
             console.log("I should be getting data for: ", p.id);
             fetch(
@@ -154,96 +138,78 @@ function calendar(date){
             )
               .then((r) => r.json())
               .then((r) => {
-                let thelist = []
-                let total = 0;
-                // for (let i of Object.values(r)){
-                //   console.log(i)
-                // }
-                // for(let h of r.zones){
-
-                // }
-                // for(let y of r.seats){
-                //   console.log(y.zone)
-                //   // console.log(r.zones[y.zone].tickets[r.zones[y.zone].defaultTicket].total)
-                // }
+                
+               
+                let totPrice = 0;
                 
                 for (let s of r.seats) {
-                  // for(let h of Object.values(r.zones)){
-                  //   if(h.id == s.zone){
-                  //     alert('id are the same')
-                  //   }
-                  // }
-
-                
-
-                  // for (let [name, value] of Object.entries(r.zones)) {
-                  //   console.log(name)
-                  //   console.log(value)
-                  // }
-                  // for (let h of r.zones){
-                  //   console.log(h)
-                  // }
-                  
-                  // console.log('h is'+h.id)
-                  // console.log('s is'+s.id)
-                  
-
-                  
                   let d = document.createElement("div");
-                  
-                  // for(let h of Object.values(r.zones)){
-                    
-                  
                   d.classList.add("seat");
-                  
                   d.classList.add("Z" + s.zone);
                   d.style.left = s.x / 2.5 + 500 + "px";
-                  d.style.top = s.y / 2.5 + 200 + "px";
-                  // for(i = 0;i<117;i++){
-                  //   let h = r.labels[`UYdv4OOeQCe/eq5R7cDGLQ/${i}`];
-                  //   console.log(h.x)
-                  // }
-                  for(let h of Object.values(r.labels)){
-                    let n = document.createElement('div');
-                    n.classList.add('name')
-                    n.style.left = h.x / 2.4 + 500 + "px";
-                    n.style.top = h.y / 2.5 + 196 + "px";
-                    n.innerText = h.content
-                    document.getElementById("seats").append(n);
-                  }
-                  // for(let h of r.labels){
-                  //   console.log
-                  // }
+                  d.style.top = s.y / 2.5 + 250 + "px";
+                  
                   if (s.available) {
-                    // console.log(s.zone)
                     d.classList.add("available");
                   }else{
                     d.classList.add("unavailable");
                   }
                   d.onclick=()=>{
+                    let myOffcanvas = document.getElementById('offcanvasRight')
+                    let bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+                    bsOffcanvas.show()
+                    let priceTotal = r.zones[s.zone].tickets[r.zones[s.zone].defaultTicket].total;
+                    let row = `
+                    <td id="labelName">${s.label}</td>
+                    <td id="state">${p.performanceTimeDescription}</td>
+                    <td id="fullprice">€${priceTotal}</td>`
+                    document.getElementById('trRow').innerHTML = row;
                     
-                    // alert(h.tickets[h.defaultTicket].total)
-                    // let price = parseInt(p.price.minPrice + p.price.minPriceFee)
-                    // thelist.push({
-                    //   eachPrice: price,
-                    //   seatLabel: s.label,
-                    //   dateTime: p.dates.performanceDate,
-                    //   ticketPrice: p.price.minPrice,
-                    //   fee: p.price.minPriceFee
+                  
+                  
+                  document.getElementById('confimrbtn').onclick=()=>{
+                    let priceTotal = r.zones[s.zone].tickets[r.zones[s.zone].defaultTicket].total;
+                    let tr = document.createElement('tr')
+                    tr.classList.add("table-info");
+                    let tdOne = document.createElement('td')
+                    let tdTwo = document.createElement('td')
+                    let tdThree = document.createElement('td')
+                    tdOne.append('Full Price');
+                    tdOne.classList.add("fullPrice");
+                    tdTwo.append(s.label);
+                    tdThree.append('€'+ priceTotal);
+                    tr.append(tdOne);
+                    tr.append(tdTwo);
+                    tr.append(tdThree);
+                    // let x = `
+                    // <tr class="table-info">
+                    //   <td>Full Price</td>
+                    //   <td>${s.label}</td>
+                    //   <td>${priceTotal}</td>
+                    // </tr>`
+                    // tr.append(x.innerHTML)
 
-                    // })
-                    // // console.log('list is'+thelist)
-                    // for (let li of thelist){
-                    //   console.log('price is'+li['eachPrice'])
-                      
-                    // }
-                    alert('ticket is'+r.zones[s.zone].defaultTicket)
-                    // alert(r.zones[s.zone].tickets[r.zones[s.zone].defaultTicket].total)
-                    
+                    document.getElementById('tableComfirmData').append(tr)
+                    totPrice += parseInt(priceTotal);
+
+                    document.getElementById('totalPrice').innerText = '€ '+ totPrice;
+                   
+
+                  console.log('price'+totPrice)
                   }
+
+                }
                   document.getElementById("seats").append(d);
                   
               
+            }
+            for(let h of Object.values(r.labels)){
+              let n = document.createElement('div');
+              n.classList.add('name')
+              n.style.left = h.x / 2.4 + 500 + "px";
+              n.style.top = h.y / 2.5 + 246 + "px";
+              n.innerText = h.content
+              document.getElementById("seats").append(n);
             }
 
               });
@@ -255,11 +221,7 @@ function calendar(date){
         }
       }
     });
-    // let m = 0;
 
-    // let dateData = ['2022']
-    // let x = 0
-    // let sub = 1;
     let dateMonth = inputDate.getMonth()+1;
     let y = inputDate.getFullYear();
 
@@ -282,6 +244,7 @@ function calendar(date){
     
    
 }
+
 
 calendar(dateInput);
 

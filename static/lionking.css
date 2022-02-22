@@ -53,6 +53,11 @@ header{
     padding-right: 100px; */
 
 }
+.bdsectiontwo{
+    /* background-color: #d5d6e2d8; */
+    background-color: rgba(220, 220, 247, 0.3);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+}
 .butdiv{
     /* background-color: #726D91; */
     width: 18%;
@@ -257,10 +262,6 @@ header{
     height: 124px;
     border: 1px solid rgba(255,255,255,0.5);
     border-radius: 8%;
-    
-    
-    /* background: rgba(255,255,255,0.1); */
-    /* background: rgba(240, 233, 233, 0.1); */
     background-color: rgb(249, 249, 251,0.3);
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     border-right: 1px solid rgba(255,255,255,0.2);
@@ -275,16 +276,6 @@ header{
     padding-left: 1%;
     padding-bottom: 0.5%;
     font-weight: 500;
-
-    /* list-style-type: decimal-leading-zero; */
-
-    /* position: relative; */
-    /* display: flex;  */
-    /* display: inline-block; */
-    /* margin-top: 10px; */
-    /* display: inline; */
-    /* padding-top: 1px; */
-
 
 
 }
@@ -326,25 +317,13 @@ header{
     /* color: rgb(64, 65, 62); */
     /* color: #6e73a0; */
     color: #726D91;
-    
-   
-    
-
-
-
 }
 #maindiv :last-child{
-    /* background-color: aquamarine; */
-    /* display: inline-block; */
     font-size: 60%;
     font-weight: 500;
-    /* color: aqua; */
     padding-left: 10%;
-    /* color: #667fb1; */
     color: #4c53ac;
-    /* display: inline-block; */
-    
-    /* padding-left: 20px; */
+
     
 }
 
@@ -355,6 +334,7 @@ header{
     width:11px;
     height: 11px;
     border-radius: 10px;
+    
 }
 .dot.LOW{
     background-color: #e61f1f;
@@ -372,38 +352,29 @@ header{
     font-size: 50%;
 }
 .seat{
-    display:inline-block;
+    /* display:inline-block; */
     position: absolute;
+    display: inline-block;
+    /* position: relative; */
+    /* position: relative; */
     width:5px;
     height: 5px;
     border-radius: 10px;
     background-color: #DDDDDD;
     margin-left: 0.5%;
-    /* padding-right: 3px; */
-    /* margin-left: 5px; */
-    /* margin-right: 10px; */
-    /* margin-left: 2px; */
-    /* margin-right: -10px; */
+
 }
 .name{
-    display:inline-block;
+    /* display:inline-block; */
     position: absolute;
-    /* width:auto; */
-    /* height: 10px; */
-    /* padding-left: 4px;
-    padding-right: 4px; */
-    font-weight: 200;
-    font-size: 40%;
-    /* margin-left: 2%;
-    margin-right: 1%; */
-    /* padding-left: 1%; */
-    /* padding-right: 1.5%; */
-    /* margin-right: 5%; */
-    color: #00023F;
+    display: inline-block;
+    /* position: relative; */
+    /* position: relative; */
+    font-weight: 400;
+    font-size: 42%;
+    color: #00023F
     pointer-events:none;
-    /* margin-right: 10%; */
-    /* border-radius: 20px; */
-    /* background-color: #4e15b9; */
+
 }
 .seat.available{
     background-color: #d488d6;
@@ -497,11 +468,102 @@ header{
     /* border:solid thin black; */
     /* border-radius: 10px; */
 }
-.Evening{
-   
+/* .Evening{
+   background-color: #002E63;
 }
 .Matinee{
 
+} */
+
+/* --------------------------------seat section--------------------------------- */
+
+#price{
+    /* background-color: #00CC99; */
+    margin: 0;
+    padding: 0;
+    /* display: inline-block; 
+    float: left; */
+}
+.row{
+    /* background-color: #5d860f; */
+    width: 100%;
+    /* margin: 0;
+    padding: 0; */
+}
+/* .seatdiv{
+    position: relative;
+   
+    background-color: #00FF6F;
+    width: 600px;
+    height: 600px;
+    
+} */
+.table{
+    padding: 0;
+    margin: 0;
+}
+#offbody{
+    padding: 0;
+    margin: 0;
+}
+.datatable td{
+    font-size: 70%;
+}
+.datatable th{
+    font-size: 90%;
+    font-weight: 600;
+}
+.offcanvas-header{
+
+    padding: 1.5%;
+}
+/* .confirmbtn{
+    width: 60%;
+} */
+.btnConfirm{
+    text-align: right;
+    /* padding-right: 3%; */
+}
+.btnConfirm button{
+    margin-right: 2%;
+    
 }
 
-/* --------------------------------------------------------------------------- */
+
+.disneyheader p{
+    font-size: 70%;
+    font-weight: 400;
+}
+.disneyheader{
+    font-weight: 600;
+}
+#performanceTime{
+    font-size: 110%;
+    font-weight: 500;
+}
+.disneyheader p{
+    padding: 0;
+    margin: 0;
+}
+/* .table-info{
+    height: 1%;
+    padding: 0;
+    margin: 0;
+} */
+.table-info td{
+    font-size: 80%;
+    font-weight: 400;
+}
+.fullPrice{
+    width: 100px;
+}
+.totTable th{
+    font-size: 100%;
+    font-weight: 400;
+}
+.order{
+    width: 100%;
+}
+#totalPrice{
+    width: 100px;
+}
