@@ -1,10 +1,8 @@
+/* ------------------------- reusable section ---------------------------------- */
 .container-fluid{
-    /* background-color: rgb(127, 255, 148); */
+
     margin: 0;
     padding: 0;
-
-    /* background-color: rgb(182, 123, 51); */
-    /* width: auto; */
 }
 *{
     margin: 0;
@@ -12,23 +10,12 @@
     box-sizing: border-box;
 }
 html{
-    /* background-color: rgb(172, 62, 62); */
-    /* color: rgb(20, 87, 59); */
     font-family: 'Lato','Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
-/* body{
-    height: 690px;
-    width: auto;
 
-    overflow-x: hidden;
-    background-color: #c680ff;
-} */
-/* header{
-
-    /* margin: 0 auto; */
 header{
     width: 100%;
     background-color: #00023F;
@@ -49,17 +36,13 @@ header{
     width: 100%;
     background-color: #FFFFFF;
     padding-top: 1%;
-    /* padding-left: 100px;
-    padding-right: 100px; */
 
 }
 .bdsectiontwo{
-    /* background-color: #d5d6e2d8; */
     background-color: rgba(220, 220, 247, 0.3);
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
 }
 .butdiv{
-    /* background-color: #726D91; */
     width: 18%;
     height: 4%;
     margin-left: 44%;
@@ -69,17 +52,13 @@ header{
 .butone{
     display: inline-block;
     float: left;
-    /* padding-left: 10%; */
     padding-top: 3%;
-    /* padding-left: 40%; */
     
 }
 .buttwo{
     display: inline-block;
     float: left;
     padding-top: 3%;
-    /* padding-left: 20%; */
-    /* margin-right: 10%; */
     
 }
 #mthName{
@@ -89,14 +68,10 @@ header{
     font-size: 150%;
     padding-left: 7%;
     padding-right: 7%;
-    /* text-align: center;
-    margin-left: 10%; */
 }
 .bdy{
-    /* background-color: #555; */
 
     height: 1050px;
-    /* height: 690px; */
 }
 
 
@@ -104,12 +79,7 @@ header{
     color: #00023F;
 }
 .status{
-    /* background-color: #9eff80; */
     height: 2.5%;
-    /* display: block; */
-    /* margin-top: 0.5%; */
-    /* position: relative; */
-    /* text-align: center; */
 }
 .avail{
     font-size: 75%;
@@ -140,34 +110,17 @@ header{
 .sthree{
     color: #e61f1f;
 }
-/* .ptwo{
-    display: inline-block;
-    float: left;
-}
-.pthree{
-    display: inline-block;
-    float: left;
-} */
+/* ------------------ calendar table and lion king image section --------------- */
 #calendar{
     width: 84%;
     height: 76%;
     text-align: center;
-    /* background-color: #D5D6E2; */
-
-
     background-color: #d5d6e2d8;
-    /* display: inline-block; */
     margin-left: 8%;
     margin-top: 1%;
     border-radius: 15px;
     padding-left: 1.5%;
-    /* padding-top: 3%; */
     position: relative;
-    /* margin-top: 4%; */
-    /* padding-left: 10%; */
-    /* display: inline; */
-    /* margin-left: 20%;
-    margin-top: 10%; */
 
 
 }
@@ -184,47 +137,33 @@ header{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     right: 0;
-
-    /* padding-left: 100px; */
 }
 .text{
-    /* background-color: #00023F; */
     width: 150%;
     height: 10%;
     position: relative;
 }
 .disney{
-    /* width: 150%; */
     color: #f7f4f4;
     font-size: 110%;
     font-weight: 600;
-    /* text-align: center; */
     padding-top: 6%;
     margin: 0;
-    /* display: inline-block; */
     position: absolute;
     padding-left: 11%;
 
 }
 .theature{
-    /* width: 150%; */
     color: #ffffff;
     font-weight: 400;
     font-size: 80%;
-    /* text-align: center; */
-    /* display: inline-block; */
-    /* padding-bottom: 100px ;
-    margin-bottom: 100px; */
     margin: 0;
-    /* margin-bottom: 10%; */
     position: absolute;
     padding-top: 15%;
     padding-left: 28%;
-    /* padding: 0; */
 }
 .pastover{
     opacity: 30%;
-    /* background-color: #00023F; */
 }
 .last{
     opacity: 20%;
@@ -238,24 +177,12 @@ header{
     padding-top: 10%;
 
 }
+/* ---------------  calendar table div adjustment ------------ */
 #tab{
     width: 74%;
-    /* height: 40%; */
     border-spacing: 9px;
     border-collapse: separate;
-    /* display: block; */
-    /* float: left; */
     position: absolute;
-    /* padding-left: 1%; */
-    /* left: 0; */
-
-
-    /* display: inline-block; */
-    /* padding: 100px; */
-
-    /* position: absolute; */
-    
-
 }
 #tab td{
     width: 6%;
@@ -272,7 +199,6 @@ header{
     align-items: center;
     text-align: left;
     vertical-align: super;
-    /* padding: 10px; */
     padding-left: 1%;
     padding-bottom: 0.5%;
     font-weight: 500;
@@ -280,12 +206,7 @@ header{
 
 }
 #tab tr{
-    /* width: 10%;
-    height: 50%; */
     cursor: pointer;
-    /* padding-top: 5px; */
-    /* display: inline-flex */
-    /* display: block; */
 }
 #tab th{
     text-transform: uppercase;
@@ -294,28 +215,14 @@ header{
     
 } 
 
-/* --------------- table div adjustment ------------ */
-/* #firstdiv{
-    background-color: #2f2d97;
-    color: aqua;
-    padding-top: 100px;
-}  */
 #maindiv{
-    /* background-color: rgb(211, 231, 218); */
     height: auto;
     width: auto;
-    /* position: relative; */
     padding-left: 5%;
-    
-    
-    
 }
 #maindiv :first-child {
-    /* background-color: red; */
     font-weight: 600;
     font-size: 85%;
-    /* color: rgb(64, 65, 62); */
-    /* color: #6e73a0; */
     color: #726D91;
 }
 #maindiv :last-child{
@@ -327,7 +234,7 @@ header{
     
 }
 
-/* ----------------- table ---------------- */
+/* ----------------- seat Dot section ---------------- */
 
 .dot{
     display:inline-block;
@@ -352,11 +259,8 @@ header{
     font-size: 50%;
 }
 .seat{
-    /* display:inline-block; */
     position: absolute;
     display: inline-block;
-    /* position: relative; */
-    /* position: relative; */
     width:5px;
     height: 5px;
     border-radius: 10px;
@@ -365,14 +269,11 @@ header{
 
 }
 .name{
-    /* display:inline-block; */
     position: absolute;
     display: inline-block;
-    /* position: relative; */
-    /* position: relative; */
     font-weight: 400;
     font-size: 42%;
-    color: #00023F
+    color: #00023F;
     pointer-events:none;
 
 }
@@ -383,9 +284,6 @@ header{
 .seat.unavailable{
     pointer-events:none;
 }
-/* .seat.Z26B3B1C1-9DF2-404D-B1B4-7F2CAE103B73.available{
-    background-color: red;
-} */
 .seat.available.z4A9F2A68-D4B5-47FA-A271-F45DCC7561B0{
     background-color: #8263ca;
 }
@@ -397,7 +295,6 @@ header{
 .seat.available.ZE63AF510-1AF6-47A9-892F-AE2870568454{
     background-color: #E30022;
 }
-
 .seat.available.Z9DCE98DD-8CED-4D28-9CFC-F56B599E3457{
     background-color: #5d860f;
 }
@@ -465,39 +362,19 @@ header{
 .box{
     width:100%;
     height:100%;
-    /* border:solid thin black; */
-    /* border-radius: 10px; */
 }
-/* .Evening{
-   background-color: #002E63;
-}
-.Matinee{
 
-} */
 
-/* --------------------------------seat section--------------------------------- */
+/* --------------------------------seat price section--------------------------------- */
 
 #price{
-    /* background-color: #00CC99; */
     margin: 0;
     padding: 0;
-    /* display: inline-block; 
-    float: left; */
 }
 .row{
-    /* background-color: #5d860f; */
     width: 100%;
-    /* margin: 0;
-    padding: 0; */
 }
-/* .seatdiv{
-    position: relative;
-   
-    background-color: #00FF6F;
-    width: 600px;
-    height: 600px;
-    
-} */
+
 .table{
     padding: 0;
     margin: 0;
@@ -545,11 +422,7 @@ header{
     padding: 0;
     margin: 0;
 }
-/* .table-info{
-    height: 1%;
-    padding: 0;
-    margin: 0;
-} */
+
 .table-info td{
     font-size: 80%;
     font-weight: 400;

@@ -8,7 +8,7 @@ function calendar(date){
     let allweek = []
     if(inputDate.getMonth()== 4){
         inputDate.setDate(1);
-        startDay = new Date(inputDate.getTime() - 1000*60*60*24* (inputDate.getDay()+6));
+        startDay = new Date(inputDate.getTime() - 1000*60*60*24* (inputDate.getDay()+5));
         let n = startDay.getTime();
         for (let weeks = 0; weeks<6; weeks ++){
             weeksquad = []
@@ -121,8 +121,6 @@ function calendar(date){
             if(cell.firstElementChild.classList.contains('last')){
               return;
             }
-            // document.getElementById("tab").classList.add("hide");
-            // document.getElementById("lion").classList.add("hide");
             document.getElementById("calendar").classList.add("hide");
             document.getElementById("seatrow").classList.remove("hide")
             document.getElementById("butdiv").classList.add("hide")
@@ -181,13 +179,6 @@ function calendar(date){
                     tr.append(tdOne);
                     tr.append(tdTwo);
                     tr.append(tdThree);
-                    // let x = `
-                    // <tr class="table-info">
-                    //   <td>Full Price</td>
-                    //   <td>${s.label}</td>
-                    //   <td>${priceTotal}</td>
-                    // </tr>`
-                    // tr.append(x.innerHTML)
 
                     document.getElementById('tableComfirmData').append(tr)
                     totPrice += parseInt(priceTotal);
@@ -216,7 +207,6 @@ function calendar(date){
           };
           cell.querySelector(".box").append(performanceDiv);
           
-  
   
         }
       }
