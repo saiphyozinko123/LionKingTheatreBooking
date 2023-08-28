@@ -5,8 +5,7 @@ The json databased is used in this project. You can view at - https://tw.igs.far
 You can view the example of full project of the system at - https://www.atgtickets.com/shows/disneys-the-lion-king/lyceum-theatre/calendar/2023-08-29.
 Months are generated dynamically based on the actual month of the year. Moreover, 3D calendar shape are used in the project. 
 Futhermore, Date and time of the show are shown between the calendar Div. The previous show will disappear from the calendar div.  
-If the user click one of the show on the calendar div, the page will redirect to the seat layout.
-In the searlayout dynamic seat are generated based on the Json data coordinates and user can book the seats by selecting them. 
+If the user click one of the show on the calendar div, the page will redirect to the seat layout.In the searlayout dynamic seat are generated based on the Json data coordinates and user can book the seats by selecting them. 
 If the seats are taken by other, the book function will not work for that seat. 
 	
 *** How To Run? ***
@@ -15,7 +14,7 @@ Download the repo, open with the text editor such as virtual studieo code and th
 
 *** Warning ***
 
-Due to the JSON dynamic database 502 bad gateway error, this project will not be work properly. 
+Due to the JSON dynamic database 502 bad gateway error, this project will not be working properly. 
 
 *** Copyright ***
 
