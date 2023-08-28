@@ -1,7 +1,7 @@
 *** About the Project ***
 
 This project is based on the HTML, CSS, Javascript and Python languages. 
-The json databased is used in this prject. 
+The json databased is used in this project. You can view at - https://tw.igs.farm/lionking/ 
 You can view the example of full project of the system at - https://www.atgtickets.com/shows/disneys-the-lion-king/lyceum-theatre/calendar/2023-08-29.
 Months are generated dynamically based on the actual month of the year. Moreover, 3D calendar shape are used in the project. 
 Futhermore, Data and time of the show are shown between the calendar Div. The previous show will disappear from the calendar div.  
