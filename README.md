@@ -33,12 +33,12 @@ This project is only authorized to the <strong>Sai Phyo Zin Ko, Edinburgh Napier
 
 All 7 query requirements have been implemented.
 
-| ID  | Query Name                                                                       | Screenshot                              |
-| --- | -------------------------------------------------------------------------------- | --------------------------------------- |
-| 1   | This is the backend plan of the Booking system.                                  | [Link](../static\photo\backendplan.png) |
-| 2   | Dynamic Month URL features for February                                          | [Link](static\photo\cal2.png)           |
-| 3   | Dynamic Month URL features for March                                             | [Link](static\photo\cal3.png)           |
-| 4   | Solving the problem of displaying from Day 2 which is Monday in May              | [Link](static\photo\cal4.png)           |
-| 5   | Examples of dynamic Seat layouts ouputted from the JSON database with Javascript | [Link](static\photo\seat1.png)          |
-| 6   | Booking the seat layout section.                                                 | [Link](static\photo\seat2.png)          |
-| 7   | Paying the Bills section for the Seat Layout.                                    | [Link](static\photo\seat3.png)          |
+| ID  | Query Name                                                                       | Screenshot                           |
+| --- | -------------------------------------------------------------------------------- | ------------------------------------ |
+| 1   | This is the backend plan of the Booking system.                                  | [Link](static/photo/backendplan.png) |
+| 2   | Dynamic Month URL features for February                                          | [Link](static\photo\cal2.png)        |
+| 3   | Dynamic Month URL features for March                                             | [Link](static\photo\cal3.png)        |
+| 4   | Solving the problem of displaying from Day 2 which is Monday in May              | [Link](static\photo\cal4.png)        |
+| 5   | Examples of dynamic Seat layouts ouputted from the JSON database with Javascript | [Link](static\photo\seat1.png)       |
+| 6   | Booking the seat layout section.                                                 | [Link](static\photo\seat2.png)       |
+| 7   | Paying the Bills section for the Seat Layout.                                    | [Link](static\photo\seat3.png)       |
